@@ -11,7 +11,6 @@ export const Header = () => {
   const [userTheme, setUserTheme] = useLocalStorage('theme', window.matchMedia('prefers-color-scheme: dark').matches ? 'dark' : 'light');
   const [small, setSmall] = useState<boolean>(false);
   useEffect(() => {
-
     if (window) {
       window.addEventListener('scroll', () => {
         setSmall(window.scrollY > 100);
@@ -31,7 +30,6 @@ export const Header = () => {
   }, [userTheme]);
 
   const onChangeTheme = () => {
-    console.log(userTheme);
     const newTheme = userTheme === 'dark' ? 'light' : 'dark';
     setUserTheme(newTheme);
   };
@@ -39,19 +37,21 @@ export const Header = () => {
     <div className={`header ${small ? 'header-scrolled' : ''}`}>
       <Link className="logo" to={'/'}>
         <Logo fill="rgb(var(--text))" />
-        <h1> MsAfro12</h1>
+        <div className="logo-text">
+          <h1> Domain.it</h1>
+          <small>Dominik Boczkowski</small>
+        </div>
       </Link>
       <div className="nav">
       </div>
       <div className="settings">
-        <BiUpArrow className="button"
-                   onClick={() => window.scrollTo(0, 0)} />
         {userTheme === 'dark' ? (
           <PiMoon className={'button'} fill="rgb(var(--text))" onClick={onChangeTheme} />
         ) : (
           <PiSun className={'button'} fill="rgb(var(--text))" onClick={onChangeTheme} />
         )}
       </div>
+      {small && (<BiUpArrow className="button scroll" onClick={() => window.scrollTo(0, 0)} />)}
     </div>
   );
 };

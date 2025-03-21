@@ -1,5 +1,5 @@
 .header {
-    position: sticky;
+    position: fixed;
     top: 1rem;
     margin: 0 1rem 2rem;
     height: 6rem;
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     align-items: center;
-    justify-items: center;
+    justify-items: end;
     z-index: 100000;
     transition: all 0.25s ease-in-out;
 
@@ -25,6 +25,7 @@
         gap: 1rem;
         color: rgb(var(--text));
         margin-left: 1rem;
+        line-height: 0;
     }
 
     .logo > svg {
@@ -33,12 +34,21 @@
         transition: all 0.25s ease-in-out;
     }
 
+    .logo-text {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        small {
+            height: 1rem;
+        }
+    }
+
     .settings {
         display: flex;
         font-size: 2rem;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
         transition: all 0.25s ease-in-out;
     }
 
@@ -54,6 +64,15 @@
     }
 }
 
+.scroll {
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: calc(-100svh + 10rem);
+    right: 1rem;
+    background-color: rgba(var(--surface0), 0.8);
+    border: 2px solid rgba(var(--text), 0.2);
+    backdrop-filter: blur(10px);
+}
 
 .header-scrolled {
     height: 3rem;
@@ -62,6 +81,14 @@
     .logo > svg {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .logo-text {
+        gap: 0;
+    }
+
+    .logo-text > small {
+        height: 0.2rem;
     }
 
     .theme-switcher {

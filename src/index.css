@@ -80,7 +80,7 @@ body {
     font-family: "Geist Mono", system-ui, Avenir, Helvetica, Arial, sans-serif;
     color: rgb(var(--text));
     font-size: 14px;
-    margin: 0;
+    margin: 8rem 0;
     padding: 0;
     background: radial-gradient(circle, rgb(var(--surface1)) 0%, rgb(var(--base)) 100%) fixed;
 }
