@@ -25,7 +25,6 @@
         gap: 1rem;
         color: rgb(var(--text));
         margin-left: 1rem;
-        line-height: 0;
     }
 
     .logo > svg {
