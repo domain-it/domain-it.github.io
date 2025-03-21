@@ -1,0 +1,70 @@
+.header {
+    position: sticky;
+    top: 1rem;
+    margin: 0 1rem 2rem;
+    height: 6rem;
+    border: 2px solid rgba(var(--text), 0.2);
+    border-radius: 1rem;
+    background-color: rgba(var(--primary), 0.5);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: center;
+    justify-items: center;
+    z-index: 100000;
+    transition: all 0.25s ease-in-out;
+
+    div {
+        margin: 0 2rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: rgb(var(--text));
+        margin-left: 1rem;
+    }
+
+    .logo > svg {
+        width: 64px;
+        height: 64px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .settings {
+        display: flex;
+        font-size: 2rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .button {
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .button:hover {
+        background-color: rgba(var(--primary), 0.5);
+    }
+}
+
+
+.header-scrolled {
+    height: 3rem;
+    font-size: 0.5rem;
+
+    .logo > svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .theme-switcher {
+        font-size: 1.5rem;
+    }
+}

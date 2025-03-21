@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+[data-theme="light"] {
+    --rosewater: 220, 138, 120;
+    --flamingo: 221, 120, 120;
+    --pink: 234, 118, 203;
+    --muave: 136, 57, 239;
+    --red: 210, 15, 57;
+    --maroon: 230, 69, 83;
+    --peach: 254, 100, 11;
+    --yellow: 223, 142, 29;
+    --green: 64, 160, 43;
+    --teal: 23, 146, 153;
+    --sky: 4, 165, 229;
+    --sapphire: 32, 159, 181;
+    --blue: 30, 102, 245;
+    --lavender: 114, 135, 253;
+    --text: 76, 79, 105;
+    --subtext1: 92, 95, 119;
+    --subtext0: 108, 111, 133;
+    --oberlay2: 124, 127, 147;
+    --overlay1: 140, 143, 161;
+    --overlay0: 156, 160, 176;
+    --surface2: 172, 176, 190;
+    --surface1: 188, 192, 204;
+    --surface0: 204, 208, 218;
+    --base: 239, 241, 245;
+    --mantle: 230, 233, 239;
+    --crust: 220, 224, 232;
+    transition: all 0.25s ease-in-out;
+
+    --primary: var(--lavender);
+    --neutral: var(--subtext0);
+    --success: var(--green);
+    --warning: var(--yellow);
+    --danger: var(--red);
+}
+
+[data-theme="dark"] {
+    --rosewater: 245, 224, 220;
+    --flamingo: 242, 205, 205;
+    --pink: 245, 194, 231;
+    --muave: 203, 166, 247;
+    --red: 243, 139, 168;
+    --maroon: 235, 160, 172;
+    --peach: 250, 179, 135;
+    --yellow: 249, 226, 175;
+    --green: 166, 227, 161;
+    --teal: 148, 226, 213;
+    --sky: 137, 220, 235;
+    --sapphire: 116, 199, 236;
+    --blue: 137, 180, 250;
+    --lavender: 180, 190, 254;
+    --text: 205, 214, 244;
+    --subtext1: 186, 194, 222;
+    --subtext0: 166, 173, 200;
+    --oberlay2: 147, 153, 178;
+    --overlay1: 127, 132, 156;
+    --overlay0: 108, 112, 134;
+    --surface2: 88, 91, 112;
+    --surface1: 69, 71, 90;
+    --surface0: 49, 50, 68;
+    --base: 30, 30, 46;
+    --mantle: 24, 24, 37;
+    --crust: 17, 17, 27;
+    transition: all 0.25s ease-in-out;
+
+    --primary: var(--lavender);
+    --neutral: var(--subtext0);
+    --success: var(--green);
+    --warning: var(--yellow);
+    --danger: var(--red);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Geist Mono", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: rgb(var(--text));
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgb(var(--surface1)) 0%, rgb(var(--base)) 100%) fixed;
+}
+
+.wip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: auto auto;
+    max-width: 100rem;
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    z-index: -100;
+
+    #layer1 {
+        width: 100%;
+        height: 100%;
+
+        #blob1 {
+            fill: rgba(var(--lavender), 0.2);
+            animation: movement_two 23s ease-in-out infinite both;
+        }
+
+        #blob2 {
+            fill: rgba(var(--blue), 0.2);
+            animation: movement_one 23s ease-in-out infinite both;
+        }
+
+        #blob3 {
+            fill: rgba(var(--lavender), 0.2);
+            animation: movement_one 23s ease-in-out infinite both;
+        }
+
+        #blob4 {
+            fill: rgba(var(--blue), 0.2);
+            animation: movement_two 23s ease-in-out infinite both;
+        }
+
+        #blob5 {
+            fill: rgba(var(--blue), 0.2);
+            animation: movement_one 23s ease-in-out infinite both;
+        }
+
+        #blob6 {
+            fill: rgba(var(--blue), 0.2);
+            animation: movement_two 23s ease-in-out infinite both;
+        }
+
+        #blob7 {
+            fill: rgba(var(--blue), 0.2);
+            animation: movement_one 23s ease-in-out infinite both;
+        }
+    }
+}
+
+@keyframes movement_one {
+    0%,
+    100% {
+        transform: none;
+    }
+    25% {
+        transform: translate(-2%, 3%) rotateY(10deg) scale(1);
+    }
+    50% {
+        transform: translate(-3%, 1%) rotateY(20deg) scale(1);
+    }
+    75% {
+        transform: translate(5%, -2%) rotateY(10deg) scale(1);
+    }
+}
+
+@keyframes movement_two {
+    0%,
+    500% {
+        transform: none;
+    }
+    50% {
+        transform: translate(-20%, -2%) rotate(-20deg) scale(1.3);
+    }
+}
+

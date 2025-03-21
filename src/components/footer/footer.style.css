@@ -1,0 +1,38 @@
+.footer {
+    background-color: rgba(var(--surface0), 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(var(--text), 0.2);
+    border-radius: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.sign {
+    text-align: left;
+}
+
+.about {
+    text-align: center;
+}
+
+.socials {
+    justify-content: right;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    text-align: right;
+
+    a {
+        margin: 0 0.5rem;
+    }
+
+    a:hover {
+        color: rgba(var(--lavender), 1);
+    }
+}

@@ -1,0 +1,21 @@
+.about-me {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+
+    img {
+        object-fit: cover;
+        height: calc(100svh - 8rem - 6rem);
+        aspect-ratio: 4/5;
+        border: 2px solid rgba(var(--text), 0.2);
+        border-radius: 1rem;
+    }
+
+    div {
+        height: calc(100svh - 8rem - 6rem);
+        overflow: scroll;
+        aspect-ratio: 4/5;
+
+    }
+}
