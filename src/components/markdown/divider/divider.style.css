@@ -1,0 +1,7 @@
+.divider {
+
+    border: 1px solid rgba(var(--text), 0.2);
+    border-radius: 1rem;
+    width: calc(100% - 20rem);
+
+}

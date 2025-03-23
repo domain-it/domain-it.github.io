@@ -1,7 +1,8 @@
 .header {
     position: fixed;
     top: 1rem;
-    margin: 0 1rem 2rem;
+    left: 1rem;
+    right: 1rem;
     height: 6rem;
     border: 2px solid rgba(var(--text), 0.2);
     border-radius: 1rem;

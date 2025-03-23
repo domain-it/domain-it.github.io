@@ -34,6 +34,8 @@
     --success: var(--green);
     --warning: var(--yellow);
     --danger: var(--red);
+
+    --link: var(--blue);
 }
 
 [data-theme="dark"] {
@@ -70,10 +72,14 @@
     --success: var(--green);
     --warning: var(--yellow);
     --danger: var(--red);
+
+    --link: var(--blue);
+
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-margin-top: -10rem;
 }
 
 body {
@@ -95,7 +101,8 @@ body {
 
 .container {
     margin: auto auto;
-    max-width: 100rem;
+    padding: 3rem;
+    max-width: 100ch;
 }
 
 
@@ -106,6 +113,20 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.copy-button {
+    position: absolute;
+    top: -1.4rem;
+    right: -1.4rem;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+
+.katex-html {
+    display: none;
 }
 
 .background-animation {

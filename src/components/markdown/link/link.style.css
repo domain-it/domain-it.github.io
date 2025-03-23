@@ -1,0 +1,13 @@
+.link {
+
+    border-bottom: 2px solid rgba(var(--link), 0);
+    color: rgb(var(--link));
+    transition: all 0.5s ease;
+
+}
+
+.link:hover {
+
+    border-bottom: 2px solid rgba(var(--link), 1);
+
+}

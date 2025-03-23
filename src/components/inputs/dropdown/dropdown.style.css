@@ -1,0 +1,13 @@
+.dropdown {
+
+    color: rgb(var(--text));
+    background-color: rgb(var(--surface1));
+    border: 1px solid rgba(var(--text), 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,14 @@
+.table {
+
+    border-collapse: collapse;
+    border: 2px solid rgba(var(--text), 0.2);
+
+    thead {
+        background-color: rgba(var(--primary), 0.5);
+    }
+
+    td, th {
+        padding: 1rem;
+        border: 1px solid rgba(var(--text), 0.2);
+    }
+}
