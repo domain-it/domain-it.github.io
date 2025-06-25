@@ -41,7 +41,23 @@ interface Props {
   params: Promise<{ 'markdown-file': string }>;
 }
 
+import fs from 'fs';
+import path from 'path';
+
+export async function generateStaticParams() {
+  const postsDirectory = path.join(process.cwd(), 'public','posts');
+  const articleDirs = fs.readdirSync(postsDirectory, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+
+  return articleDirs.map(articleName => ({
+    'markdown-file': articleName,
+  }));
+}
+
+
 export default async function MarkdownPage({ params }: Props) {
+
   const { 'markdown-file': markdownFile } = await params;
 
   let metadata: MarkdownMetaData = {
