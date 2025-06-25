@@ -1,0 +1,30 @@
+.scroll-button {
+  margin: 1rem;
+  background: rgba(var(--accent-main), 0.2);
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.2s;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (max-height: 916px ),(max-width: 916px ) {
+  .scroll-button {
+    right: 1rem;
+    bottom: 6rem;
+  }
+}

@@ -1,0 +1,48 @@
+.about-me-image {
+  max-width: 40rem;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.about-me-page {
+  max-width: 80ch;
+  margin: 3rem auto;
+  text-align: justify;
+  position: relative;
+}
+
+.dog-name {
+  position: relative;
+}
+
+.dog-name:hover, .dog-name:active {
+  .about-me-tooltip-dog {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+.about-me-tooltip-dog {
+  background: rgba(var(--accent-main), 0.2);
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: -50%;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+
+  img {
+    border-radius: 1rem;
+    width: 10rem;
+    height: 10rem
+  }
+}

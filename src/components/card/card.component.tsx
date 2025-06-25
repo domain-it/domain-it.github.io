@@ -1,31 +1,56 @@
+import React from 'react';
+import { MarkdownMetaData } from '@/types/metadata.type';
 import './card.style.css';
-import { FaClock, FaTag } from 'react-icons/fa6';
-import { GiSBrick } from 'react-icons/gi';
+import Link from 'next/link';
+import Image from 'next/image';
+import './card.style.css';
+import { MdPerson } from 'react-icons/md';
+import { FiCalendar, FiTag } from 'react-icons/fi';
+import { BiRightArrow } from 'react-icons/bi';
 
-interface CardProps {
-  imageUrl: string;
-  onClick?: () => void;
-  title: string;
-  subtitle?: string;
-  description?: string;
-  time: string;
+interface ArticleCardProps {
+  article: MarkdownMetaData;
 }
 
-export const Card = (props: CardProps) => {
-  const { imageUrl, time, description, onClick, subtitle, title } = props;
+export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+  const { title, description, author, date, tags, url, thumbnail } = article;
+  console.log('article', article);
   return (
     <div className="card">
-      <div className="image">
-        <img src={imageUrl} alt={'Construction Site'} />
-        <div className="tags"><FaTag />WiP</div>
-        <div className="button" onClick={onClick}><GiSBrick /></div>
+      {thumbnail ?
+        <Image
+          className="thumbnail"
+          style={{ objectFit: 'cover' }}
+          fill={true}
+          src={thumbnail}
+          alt={'test'}
+        />
+      : null}
+      {tags && tags.length > 0 && (
+        <div className="tags">
+          {tags.map(tag => (
+            <span className="tag" key={tag}>
+              <FiTag />
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="author chip">
+        <MdPerson /> {author}
       </div>
-      <div className="text">
-        <h2 className="title">{title}</h2>
-        <h3 className="subtitle">{subtitle}</h3>
-        <p className="description">{description} </p>
-        <small className="time"><FaClock /> {time} </small>
+      <div className="date chip">
+        <FiCalendar /> {date}
       </div>
+      <h3 className="title">{title}</h3>
+      <p>
+        <em>{description}</em>
+      </p>
+      {url ?
+        <Link className="url" href={url}>
+          <BiRightArrow />
+        </Link>
+      : null}
     </div>
   );
 };

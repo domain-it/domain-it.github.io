@@ -1,0 +1,148 @@
+.katex-html {
+  display: none;
+}
+
+article {
+  max-width: 80ch;
+  margin: 0 auto 0;
+}
+
+.article-header {
+  background-color: rgba(var(--surface-2), 0.5);
+  border: 1px solid rgba(var(--surface-2), 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.article-title {
+  margin-top: 0;
+  font-size: 2rem;
+  max-width: 66%;
+}
+
+.article-author,
+.article-data,
+.article-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block: 0.5rem;
+
+  svg {
+    background-color: rgba(var(--accent-main), 0.5);
+    border-radius: 10rem;
+    padding: 0.5rem;
+  }
+}
+
+.article-tags {
+  display: flex;
+  bottom: 1rem;
+  right: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 1rem;
+
+  .article-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(var(--accent-main), 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgba(var(--accent-main), 0.2);
+    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+  }
+}
+
+.toc {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
+}
+
+.toc-enable {
+  background-color: rgba(var(--surface-2), 0.5);
+  border-radius: 1rem;
+  margin-block: 1rem;
+  padding: 1rem;
+  position: relative;
+  height: min-content;
+}
+
+.toc::before {
+  content: "Table of Contents";
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.toc::after {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  right: 2rem;
+  border-bottom: 0.1rem solid rgba(var(--accent-main), 0.5);
+}
+
+.article-settings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.article-content {
+  max-width: 80ch;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.font-sm {
+  font-size: 0.6em !important;
+}
+
+.font-md {
+  font-size: 1em !important;
+}
+
+.font-lg {
+  font-size: 1.4em !important;
+}
+
+.font-dyslexia {
+  font-family: 'Arial', 'Droid Sans', sans-serif;
+}
+
+.thumbnail_image {
+  position: absolute;
+  top: 5.5%;
+  right: 1rem;
+  bottom: 0;
+  width: 33%;
+  height: 89%;
+  object-fit: cover;
+  border-radius: 1rem;
+
+}
+
+@media screen and (max-width: 700px ) {
+  .thumbnail_image {
+    display: none;
+    max-width: unset;
+  }
+}

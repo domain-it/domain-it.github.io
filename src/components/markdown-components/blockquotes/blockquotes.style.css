@@ -1,0 +1,13 @@
+.blockquote {
+  background: rgba(var(--surface-2), 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--surface-2), 0.5);
+  border-left: 4px solid rgba(var(--accent-main), 1);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-block: 2rem;
+
+  .blockquote-icon {
+    fill: rgba(var(--accent-main), 1);
+  }
+}

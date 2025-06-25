@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "20250619-Under_construction",
+    "tags": [
+      "Site",
+      "Nextjs",
+      "Blog",
+      "Post"
+    ],
+    "author": "Dominik Boczkowski",
+    "date": "2025-06-19",
+    "title": "Under Construction 🏗️",
+    "description": "My website is currently under construction. I'm working on new features and will launch the full version soon. Thank you for your patience — something special will be available shortly!",
+    "robots": true,
+    "charset": "UTF-8",
+    "thumbnail": "/posts/20250619-Under_construction/20250619-Under_construction.jpg",
+    "url": "/20250619-Under_construction"
+  }
+]

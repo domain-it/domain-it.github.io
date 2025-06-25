@@ -1,0 +1,26 @@
+.code-block {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba(var(--surface-2), 0.5);
+  border-radius: 0.6rem;
+  padding: 0.4rem;
+  background-color: rgba(var(--surface-2), 0.5);
+  max-width: 100%;
+  text-wrap: balance;
+}
+
+.clipboard {
+  color: rgba(var(--accent-main), 1);
+  position: absolute;
+  bottom: 0;
+  right: -1.5rem;
+  opacity: 0;
+  background-color: rgba(var(--surface-1), 0.5);
+  padding: 0.2rem;
+  border: 1px solid rgba(var(--surface-1), 0.5);
+  border-radius: 0.4rem;
+}
+
+.code-block:hover .clipboard {
+  opacity: 1;
+}

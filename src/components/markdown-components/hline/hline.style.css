@@ -1,0 +1,4 @@
+.hline {
+  margin-block: 2rem;
+  border: 1px solid rgb(var(--accent-main));
+}
