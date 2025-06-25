@@ -41,6 +41,8 @@ interface Props {
   params: Promise<{ 'markdown-file': string }>;
 }
 
+export const dynamicParams = true
+
 export default async function MarkdownPage({ params }: Props) {
   const { 'markdown-file': markdownFile } = await params;
 
