@@ -1,15 +1,15 @@
 'use client';
 import './page.style.css';
-import { useEffect, useState } from 'react';
 import { MarkdownMetaData } from '@/types/metadata.type';
 import { fetchPosts } from '@/utils/fetchPosts';
 import { ArticleCard } from '@/components/card/card.component';
+import React from 'react';
 
 export default function Home() {
-  const [posts, setPosts] = useState<MarkdownMetaData[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [posts, setPosts] = React.useState<MarkdownMetaData[]>([]);
+  const [error, setError] = React.useState<string | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchPosts()
       .then(setPosts)
       .catch(err => setError(err.message));
