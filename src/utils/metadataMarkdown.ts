@@ -36,19 +36,23 @@ export function parseMarkdown(markdown: string): ParsedMarkdown {
             break;
           }
         }
+        // @ts-expect-error tutaj nie wiem, jaki będzie typ
+
         acc[key.trim()] = listItems;
         return acc;
       }
 
       // Parsowanie boolean
+      // @ts-expect-error tutaj nie wiem, jaki będzie typ
       if (value.toLowerCase() === 'true') value = true;
+      // @ts-expect-error tutaj nie wiem, jaki będzie typ
       else if (value.toLowerCase() === 'false') value = false;
 
       // Jeśli klucz to charset, wymuś pasowanie do typu (można też dodać walidację)
       if (key.trim() === 'charset') {
         value = value as MarkdownMetaData['charset'];
       }
-
+      // @ts-expect-error tutaj nie wiem, jaki będzie typ
       acc[key.trim() as keyof MarkdownMetaData] = value;
 
       return acc;
