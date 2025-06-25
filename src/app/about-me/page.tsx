@@ -23,26 +23,26 @@ export default function aboutMePage() {
           sizes="100vw"
         />
         <div className="about-me-1p">
-          <h2>Hi, I'm Dominik!</h2>
+          <h2>Hi, I&#39;m Dominik!</h2>
         </div>
       </div>
       <p>
         Glad you dropped by. If you want to learn anything about Frontend,
-        technology, a bit more about your hobby, or if you're a recruiter
+        technology, a bit more about your hobby, or if you&#39;re a recruiter
         looking to find out more about me, my ideas, beliefs, and knowledge,
-        then you've come to the right place!
+        then you&#39;ve come to the right place!
       </p>
       <div>
         <p>
           My adventure with Frontend began back in middle school, the moment I
           became fascinated with writing code. My first struggles were small
           scripts written in Batch (a chat between computers in the classroom to
-          communicate during lessons, a small "virus" that launched a duplicate
+          communicate during lessons, a small &#34;virus&#34; that launched a duplicate
           of itself in a loop, automating certain things on the computer). In
           technical high school, I got to know HTML and, as a result, other
           languages useful in web development. I worked for a short time at an
           advertising agency, editing their website and creating a new one to
-          sell a product. The work there didn't necessarily help me grow. It was
+          sell a product. The work there didn&#39;t necessarily help me grow. It was
           discovering at home that allowed me to get to know this world better.
           Now, I use Linux (I use Arch, btw!), set up servers in my home-lab,
           create home automation for myself and my family, write websites (like
@@ -62,13 +62,13 @@ export default function aboutMePage() {
         </span>
       </div>
       <p>
-        Seeing what's happening in the IT world, I often want to share my
+        Seeing what&#39;s happening in the IT world, I often want to share my
         thoughts — both the positive and the negative. Reddit, Facebook, X
-        (formerly Twitter), Mastodon don't always allow for the complete freedom
+        (formerly Twitter), Mastodon don&#39;t always allow for the complete freedom
         to express what I want to say. At least not directly. But I believe my
         musings will allow you to broaden your horizons, not just in terms of
         knowledge but also in perspective. You might agree with me or not, but
-        it's the confrontation of views that makes us better people.
+        it&#39;s the confrontation of views that makes us better people.
       </p>
       <p>
         With 16 years of experimenting with computers and 4 years of commercial
