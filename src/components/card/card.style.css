@@ -6,6 +6,7 @@
   background-color: rgba(var(--surface-2), 0.5);
   padding: 10rem 1rem 2.5rem 1rem;
   position: relative;
+  transition: all 0.3s;
 
   .chip {
     position: absolute;
@@ -85,11 +86,13 @@
     justify-content: center;
     transition: all 300ms ease-in-out;
   }
+}
 
-  .url:hover {
+.card:hover {
+  border: 1px solid rgba(var(--accent-main), 1);
+  .url{
     background-color: rgba(var(--accent-main), 0.5);
     color: rgb(var(--base));
-
     &::after {
       display: none;
     }

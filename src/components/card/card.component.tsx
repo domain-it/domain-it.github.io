@@ -1,12 +1,12 @@
 import React from 'react';
 import { MarkdownMetaData } from '@/types/metadata.type';
 import './card.style.css';
-import Link from 'next/link';
 import Image from 'next/image';
 import './card.style.css';
 import { MdPerson } from 'react-icons/md';
 import { FiCalendar, FiTag } from 'react-icons/fi';
 import { BiRightArrow } from 'react-icons/bi';
+import { useRouter } from 'next/navigation';
 
 interface ArticleCardProps {
   article: MarkdownMetaData;
@@ -14,9 +14,11 @@ interface ArticleCardProps {
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
   const { title, description, author, date, tags, url, thumbnail } = article;
-  console.log('article', article);
+
+  const router = useRouter();
+
   return (
-    <div className="card">
+    <div className="card" onClick={() => router.push(`/article/${article.url}`)}>
       {thumbnail ?
         <Image
           className="thumbnail"
@@ -47,9 +49,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
         <em>{description}</em>
       </p>
       {url ?
-        <Link className="url" href={`article/${url}`}>
+        <div className="url">
           <BiRightArrow />
-        </Link>
+        </div>
       : null}
     </div>
   );
