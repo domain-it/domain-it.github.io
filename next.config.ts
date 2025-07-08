@@ -1,10 +1,13 @@
 import type { NextConfig } from 'next';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  basePath: '/domain-it.github.io',
-  assetPrefix: '/domain-it.github.io',
+  basePath: isProd ? '/domain-it.github.io' : '',
+  assetPrefix: isProd ? '/domain-it.github.io/' : '',
   output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
   webpack(config) {
