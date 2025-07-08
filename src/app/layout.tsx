@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/header/header.component';
-import { Theme } from '@/providers/theme.provider';
 import React from 'react';
 import { Geist_Mono } from 'next/font/google';
 import { Footer } from '@/components/footer/footer.component';
@@ -24,15 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.className}`} suppressHydrationWarning>
-      <body className={'dark'}>
-        <Theme>
+      <body>
           <div className="background">
             <Blob className="background-blob" />
           </div>
           <Header />
           <div className="container">{children}</div>
           <Footer />
-        </Theme>
       </body>
     </html>
   );

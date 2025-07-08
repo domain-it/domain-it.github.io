@@ -18,7 +18,7 @@ export const Header = () => {
         <Breadcrumb homeElement={'home@site:~'} separator={'/'} />
       </div>
       <div className="settings">
-        <ThemeSwitcher />
+        <ThemeSwitcher/>
       </div>
     </div>
   );

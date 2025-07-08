@@ -1,23 +1,36 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { BiMoon, BiSun } from 'react-icons/bi';
 import './theme-switcher.style.css';
+import { useEffect, useState } from 'react';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
 export const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  // Inicjalizacja stanu na podstawie localStorage lub domyślnie 'light'
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'light';
+    }
+    return 'light';
+  });
 
-  useEffect(() => setMounted(true), []);
+  // Efekt synchronizujący klasę na <html> i localStorage po zmianie theme
+  useEffect(() => {
+    const root = document.querySelector('html');
+    if (!root) return;
 
-  if (!mounted) return null;
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
 
-  if (resolvedTheme === 'dark') {
-    return <BiSun className={'sun'} onClick={() => setTheme('light')} />;
-  }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
-  if (resolvedTheme === 'light') {
-    return <BiMoon className={'moon'} onClick={() => setTheme('dark')} />;
-  }
+  // Funkcja przełączająca motyw
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  console.log(theme)
+
+
+  return (theme === 'light' ? <FiSun className={'sun'} onClick={toggleTheme}/> : <FiMoon className={'moon'} onClick={toggleTheme}/>);
 };
