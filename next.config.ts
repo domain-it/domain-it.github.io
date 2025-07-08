@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  basePath: '/domain-it.github.io',
+  assetPrefix: '/domain-it.github.io',
+  output: "export",
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
