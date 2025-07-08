@@ -115,18 +115,19 @@ a {
 
 a::after {
   content: '';
-  display: none;
+  opacity: 0;
   position: absolute;
   bottom: -0.2rem;
   left: 0;
   right: 0;
   border-bottom: 2px solid rgba(var(--accent-main), 1);
   border-radius: 100rem;
+  transition: opacity 200ms ease-in-out;
 }
 
 a:hover {
   &::after {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -243,4 +244,8 @@ strong {
   50% {
     opacity: 0;
   }
+}
+
+.bold {
+  font-weight: bold;
 }

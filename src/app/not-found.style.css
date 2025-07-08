@@ -1,0 +1,26 @@
+.center-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 74.3svh;
+  margin: auto;
+}
+
+.error-box{
+  background-color: rgba(var(--danger), 0.4);
+  padding: 1rem 5rem 3rem 5rem;
+  border-radius: 1rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.error-box-icon {
+  position: absolute;
+  top: 3.45rem;
+  left: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: rgb(var(--danger));
+}
+

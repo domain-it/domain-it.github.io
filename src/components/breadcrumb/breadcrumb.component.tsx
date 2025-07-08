@@ -27,7 +27,7 @@ export const Breadcrumb = ({ homeElement, separator }: TBreadCrumbProps) => {
           return (
             <Fragment key={index}>
               <li className={'breadcrumb-item '}>
-                <Link href={href}>{link}.md</Link>
+                <Link href={href}>{link}</Link>
               </li>
               {pathNames.length !== index + 1 && separator}
             </Fragment>
