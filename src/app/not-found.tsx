@@ -1,7 +1,7 @@
-import './_not-found.style.css'
+import './not-found.style.css'
 import Link from 'next/link';
 import { MdError } from 'react-icons/md';
-export default function _notFound() {
+export default function notFound() {
 
   return (
     <div className='center-page'>
