@@ -15,10 +15,10 @@ export const Footer = () => {
       </div>
       <div className="footer-right">
         <span className="footer-link-title">Find me here:</span>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/dominik-boczkowski-429940357/">
           <FaLinkedin />
         </Link>
-        <Link href="/">
+        <Link href="https://github.com/dboczkow">
           <FaGithub />
         </Link>
       </div>

@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.className}`} suppressHydrationWarning>
+    <html lang="en" className={`${geist.className} light`} suppressHydrationWarning>
       <body>
           <div className="background">
             <Blob className="background-blob" />

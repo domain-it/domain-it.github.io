@@ -58,6 +58,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
+      - name: Generate articles
+        run: pnpm run gen
+
       - name: Build with Next.js
         run: pnpm run build
         env:
