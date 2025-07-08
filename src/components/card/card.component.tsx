@@ -47,7 +47,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
         <em>{description}</em>
       </p>
       {url ?
-        <Link className="url" href={url}>
+        <Link className="url" href={`article/${url}`}>
           <BiRightArrow />
         </Link>
       : null}
