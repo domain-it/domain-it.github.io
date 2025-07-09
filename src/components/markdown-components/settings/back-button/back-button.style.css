@@ -6,4 +6,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 100rem;
+  transition: all 0.3s;
+}
+.back-button:hover {
+  background: rgba(var(--accent-main), 0.8);
+  color: rgb(var(--base));
 }
