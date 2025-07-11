@@ -5,6 +5,7 @@ import React from 'react';
 import { Geist_Mono } from 'next/font/google';
 import { Footer } from '@/components/footer/footer.component';
 import Blob from '@/assets/blob.svg';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   title: 'Domain.it Blog',
@@ -22,14 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.className} light`} suppressHydrationWarning>
+    <html lang="en" className={`${geist.className}`} suppressHydrationWarning>
       <body>
+        <ThemeProvider>
           <div className="background">
             <Blob className="background-blob" />
           </div>
           <Header />
           <div className="container">{children}</div>
           <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

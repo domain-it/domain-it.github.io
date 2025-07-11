@@ -1,4 +1,4 @@
-.light {
+[data-theme="light"] {
   --rosewater: 220, 138, 120;
   --flamingo: 221, 120, 120;
   --pink: 234, 118, 203;
@@ -27,7 +27,7 @@
   --crust: 220, 224, 232;
 }
 
-.dark {
+[data-theme="dark"] {
   --rosewater: 245, 224, 220;
   --flamingo: 242, 205, 205;
   --pink: 245, 194, 231;
