@@ -62,8 +62,15 @@ export default async function MarkdownPage({ params }: Props) {
 
   let metadata: MarkdownMetaData = {
     author: 'Dominik Boczkowski',
-    title: '',
+    title: 'No title',
     charset: 'UTF-8',
+    slug: '',
+    tags: [],
+    date: '',
+    description: '',
+    robots: false,
+    thumbnail: '',
+    url: '',
   };
   let content = '';
 
