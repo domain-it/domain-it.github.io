@@ -1,11 +1,11 @@
 export interface MarkdownMetaData {
-  slug?: string;
-  tags?: string[];
+  slug: string;
+  tags: string[];
   author: string;
-  date?: string;
+  date: string;
   title: string;
-  description?: string;
-  robots?: boolean;
+  description: string;
+  robots: boolean;
   charset: // ASCII
   | 'US-ASCII'
 
@@ -73,6 +73,6 @@ export interface MarkdownMetaData {
     | 'TIS-620' // Thai
     | 'VISCII' // Vietnamese
     | 'HZ-GB-2312'; // Simplified Chinese
-  thumbnail?: string;
-  url?: string;
+  thumbnail: string;
+  url: string;
 }
