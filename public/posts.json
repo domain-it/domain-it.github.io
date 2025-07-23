@@ -1,5 +1,22 @@
 [
   {
+    "slug": "20250715-Start_with_linux",
+    "tags": [
+      "Linux",
+      "Basic",
+      "HowTo",
+      "Tutorial"
+    ],
+    "author": "Dominik Boczkowski",
+    "date": "2025-07-15",
+    "title": "Start with Linux",
+    "description": "In times when Microsoft is making the moves it's making, and macOS is changing its UI to Liquid Glass, which doesn't appeal to everyone, more and more people are considering alternatives.",
+    "robots": true,
+    "charset": "UTF-8",
+    "thumbnail": "/posts/20250715-Start_with_linux/20250715-Start_with_linux.jpg",
+    "url": "/20250715-Start_with_linux"
+  },
+  {
     "slug": "20250619-Under_construction",
     "tags": [
       "Site",
