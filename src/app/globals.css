@@ -106,6 +106,7 @@ body {
   background-color: rgb(var(--base));
   position: absolute;
   z-index: 0;
+  width: 100%;
 }
 
 a {
